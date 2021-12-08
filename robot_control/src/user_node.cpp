@@ -1,6 +1,6 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
-#include "second_assignment/user_interaction.h"
+#include "robot_control/user_interaction.h"
 #include "std_srvs/Empty.h"
 #include <iostream>
 #include <math.h>  
@@ -65,7 +65,7 @@ int main (int argc , char **argv){
 		}
 		else{
 			//Initialization of the client to the "/user_interaction" service
-			ros::ServiceClient client = nh.serviceClient<second_assignment::user_interaction>("/user_interaction");
+			ros::ServiceClient client = nh.serviceClient<robot_control::user_interaction>("/user_interaction");
 			second_assignment::user_interaction srv;
 			
 			//Assignment of the request
