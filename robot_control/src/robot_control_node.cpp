@@ -40,6 +40,9 @@ bool userCoeff(robot_control::user_interaction::Request&req, robot_control::user
 	}
 	else if(req.user_answer == -1){
 		user_coeff = user_coeff - 0.1;
+		if (user_coeff <= 0){
+			user_coeff = user_coeff + 0.1;
+		}
 	}
 	
 	res.user_coeff = user_coeff;
