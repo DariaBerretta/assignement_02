@@ -2,7 +2,7 @@
 #include "std_msgs/String.h"
 #include "sensor_msgs/LaserScan.h"
 #include "geometry_msgs/Twist.h"
-#include "second_assignment/user_interaction.h"
+#include "robot_control/user_interaction.h"
 #include <iostream>
 #include <math.h>
 using namespace std;
@@ -33,7 +33,7 @@ float user_coeff = 1.0;
  * decrease the speed of the robot
  * The response assume the value of the user_coeff
  */
-bool userCoeff(second_assignment::user_interaction::Request&req, second_assignment::user_interaction::Response&res){
+bool userCoeff(robot_control::user_interaction::Request&req, robot_control::user_interaction::Response&res){
 
 	if(req.user_answer ==1){
 		user_coeff = user_coeff +0.1;
