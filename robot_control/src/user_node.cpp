@@ -66,7 +66,7 @@ int main (int argc , char **argv){
 		else{
 			//Initialization of the client to the "/user_interaction" service
 			ros::ServiceClient client = nh.serviceClient<robot_control::user_interaction>("/user_interaction");
-			second_assignment::user_interaction srv;
+			robot_control::user_interaction srv;
 			
 			//Assignment of the request
 			srv.request.user_answer = user_answer;
